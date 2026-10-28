@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Equipe do Observatório Agro Catarinense, sob a gestão técnica da Epagri/Cepa."
+    />
+    <title>Equipe | Observatório Agro Catarinense</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+:root {
+  --green: #2d5f2e;
+  --green-dark: #2c3e35;
+  --text: #333333;
+  --muted: #707070;
+  --section: #777777;
+  --page-max: 1180px;
+  --card-gap: clamp(1.25rem, 2.4vw, 2.4rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ffffff;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--text);
+  font-family: "Roboto", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.page-shell {
+  width: min(calc(100% - 3rem), var(--page-max));
+  margin: 0 auto;
+  padding: clamp(2.75rem, 6vw, 5.5rem) 0 clamp(4rem, 8vw, 7rem);
+}
+
+.page-header {
+  max-width: 860px;
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--green);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: var(--green);
+  font-size: clamp(2rem, 3.2vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+.intro {
+  max-width: 820px;
+  margin: 1.1rem 0 0;
+  color: #333333;
+  font-size: clamp(0.95rem, 1.35vw, 1rem);
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.team-section + .team-section {
+  margin-top: clamp(3.75rem, 7vw, 6rem);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 clamp(1.65rem, 3vw, 2.6rem);
+  color: var(--section);
+  font-size: clamp(1.1rem, 1.8vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.section-heading::after {
+  display: block;
+  width: min(230px, 20vw);
+  height: 1px;
+  background: #e4e9e4;
+  content: "";
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  column-gap: var(--card-gap);
+  row-gap: clamp(2.5rem, 4.4vw, 4.5rem);
+  align-items: start;
+}
+
+.person-card {
+  min-width: 0;
+  text-align: center;
+}
+
+.photo-frame {
+  display: grid;
+  place-items: center;
+  min-height: 132px;
+  margin-bottom: 0.9rem;
+  overflow: visible;
+}
+
+.person-photo {
+  display: block;
+  width: clamp(94px, 8vw, 124px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #edf1ed;
+  transition: transform 280ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+}
+
+.person-photo:hover,
+.person-photo:focus-visible {
+  transform: translateY(-6px) scale(1.15);
+  outline: none;
+}
+
+.person-name {
+  margin: 0 auto;
+  color: var(--green-dark);
+  font-size: clamp(0.95rem, 1.35vw, 1.08rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.person-role,
+.person-detail {
+  margin: 0.38rem auto 0;
+  max-width: 210px;
+  color: #666666;
+  font-size: clamp(0.8rem, 1.05vw, 0.875rem);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.person-detail {
+  margin-top: 0.16rem;
+  color: #777777;
+}
+
+@media (max-width: 980px) {
+  .team-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    width: min(calc(100% - 2rem), 560px);
+    padding-top: 2.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1rem;
+    row-gap: 2.75rem;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .section-heading::after {
+    width: 64px;
+  }
+
+  .photo-frame {
+    min-height: 112px;
+  }
+
+  .person-photo {
+    width: 104px;
+  }
+}
+
+@media (max-width: 390px) {
+  .page-shell {
+    width: min(calc(100% - 1.5rem), 340px);
+  }
+
+  .person-photo {
+    width: 92px;
+  }
+
+  .person-name {
+    font-size: 0.9rem;
+  }
+
+  .person-role,
+  .person-detail {
+    font-size: 0.76rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .person-photo {
+    transition: none;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <p class="eyebrow">Infoagro</p>
+        <h1>Equipe</h1>
+        <p class="intro">
+          O Infoagro está sob a gestão e responsabilidade técnica da Epagri/Cepa. É a equipe do Centro de Pesquisa que produz o conhecimento aqui disponível e também em outros produtos informacionais disponibilizados pela unidade.
+        </p>
+      </header>
+
+      <div id="team-sections" aria-live="polite"></div>
+    </main>
+
+    <script>
+const imageBase = "https://www.observatorioagro.sc.gov.br/wp-content/uploads/2022/10/";
+const cepaImageBase = "https://cepa.epagri.sc.gov.br/wp-content/uploads/2026/09/";
+const cepa2026ImageBase = "https://cepa.epagri.sc.gov.br/wp-content/uploads/2026/03/";
+const julyImageBase = "https://www.observatorioagro.sc.gov.br/wp-content/uploads/2025/07/";
+const marchImageBase = "https://www.observatorioagro.sc.gov.br/wp-content/uploads/2025/03/";
+
+const permanent = [
+  ["Alexandre Luis Giehl", "Analista de Socioeconomia e Desenvolvimento Rural", "Engenheiro agrônomo", `${imageBase}Alexandre-150x150.jpg`],
+  ["Ana Paula Klaumann", "Analista de Socioeconomia e Desenvolvimento Rural", "Economista, doutora em Economia do Desenvolvimento", `${imageBase}WhatsApp-Image-2026-09-22-at-13.54.00-150x150.jpeg`],
+  ["Andréa Castelo Branco Brasileiro Assing", "Analista de Socioeconomia e Desenvolvimento Rural", "Economista Ecológica, doutora em Ciências Ambientais", `${imageBase}20251113_143535-scaled-e1763120910243-150x150.jpg`],
+  ["Bruna Parente Porto", "Extensionista Rural – NS", "Engenheira agrônoma", `${imageBase}Bruna-e1744825349400-150x150.jpg`],
+  ["Diego Dos Santos", "Analista de Socioeconomia e Desenvolvimento Rural", "Engenheiro agrônomo, doutor em Agroecossistemas", `${cepaImageBase}20260826_160212-1-e1788438065950-150x150.jpeg`],
+  ["Dilvan Luiz Ferrari", "Pesquisador", "Engenheiro agrônomo, doutor em Desenvolvimento Rural", `${imageBase}Dilvan-150x150.jpg`],
+  ["Édila G. Botelho", "Bibliotecária", "Biblioteconomista", `${imageBase}Edila_ed-150x150.jpg`],
+  ["Fernanda De Liz Mota", "Chefe da Divisão de Gestão Administrativo e Financeiro", "", `${cepaImageBase}20260902_161644-e1788438189538-150x150.jpeg`],
+  ["Fernando V. de Luca", "Analista de Socioeconomia e Desenvolvimento Rural", "Engenheiro agrônomo", `${imageBase}Fernando-1-150x150.jpg`],
+  ["Glaucia de Almeida Padrão", "Gerente do Centro Especializado", "Analista de Socioeconomia e Desenvolvimento Rural · Economista, doutora em Economia Aplicada", `${imageBase}Frame-1321314383-150x150.png`],
+  ["Henrique Oldoni", "Pesquisador", "Engenheiro Agrícola, doutor em Agronomia", `${cepaImageBase}image-1-150x150.png`],
+  ["João Rogério Alves", "Analista de Socioeconomia e Desenvolvimento Rural", "Engenheiro agrônomo, mestre em Agroecossistemas", `${imageBase}Joao-150x150.jpg`],
+  ["José Antônio Louzada", "Analista de Socioeconomia e Desenvolvimento Rural", "Engenheiro agrônomo, doutor em Desenvolvimento Rural", `${imageBase}Image_20260929_104733_669-150x150.jpeg`],
+  ["Lilian de Pellegrini Elias", "Analista de Socioeconomia e Desenvolvimento Rural", "Economista, doutora em Desenvolvimento Econômico", `${imageBase}Lilian-8_ed_quad-150x150.jpg`],
+  ["Lillian Bastian", "Analista de Socioeconomia e Desenvolvimento Rural", "Bacharel e doutora em Desenvolvimento Rural", `${imageBase}20251113_145042-scaled-e1763121498813-150x150.jpg`],
+  ["Luis Augusto Araujo", "Analista de Socioeconomia e Desenvolvimento Rural", "Engenheiro agrônomo, mestre em Economia Aplicada", `${imageBase}Araujo_ed-150x150.jpg`],
+  ["Luísa Back", "Estatística", "Estatística, Mestre em Epidemiologia, Tecnóloga em Análise e Desenvolvimento de Sistemas", `${imageBase}luisa-150x150.jpeg`],
+  ["Luiz Toresan", "Analista de Socioeconomia e Desenvolvimento Rural", "Engenheiro agrônomo, doutor em Engenharia de Produção", `${imageBase}Luiz-150x150.jpg`],
+  ["Roberth Andres Villazon Montalvan", "Analista de Socioeconomia e Desenvolvimento Rural", "Engenheiro de Produção, doutor em Engenharia Ambiental", `${imageBase}Andres-150x150.jpg`],
+  ["Rogério Goulart Jr.", "Analista de Socioeconomia e Desenvolvimento Rural", "Economista, doutor em Desenvolvimento Econômico", `${imageBase}Rogerio-2-150x150.jpg`],
+];
+
+const decentralized = [
+  ["Adelina Cecilia De Andrade Berns", "Gerência Regional de Lages e São Joaquim", "Assistente de Pesquisa · Engenheira Agrônoma, especialista em Agronegócios", `${imageBase}Imagem-do-WhatsApp-de-2025-04-07-as-15.06.36_a52d8cae-e1744049474923-150x150.jpg`],
+  ["Andriele Caroline de Morais", "Assistente de Pesquisa – Agente de mercado", "Engenheira agrônoma, especialista em Gestão de Agronegócios", `${julyImageBase}WhatsApp-Image-2025-07-09-at-10.14.37-e1752079786919-150x150.jpeg`],
+  ["Catherine Amorim", "Assistente de Pesquisa – Agente de Mercado", "Engenheira Agrônoma, especialista em Agronegócios", `${julyImageBase}WhatsApp-Image-2025-07-09-at-10.15.09-e1752080020479-150x150.jpeg`],
+  ["Emile Dayara Rabelo Santana", "Assistente de Pesquisa – Agente de Mercado", "Engenheira agrônoma, especialista em Agronegócios", `${julyImageBase}WhatsApp-Image-2025-07-09-at-10.15.25-e1752080215255-150x150.jpeg`],
+  ["Evandro Uberdan Anater", "Gerência Regional de Campos Novos", "Analista de socioeconomia e desenvolvimento rural · Estudos sociais", `${imageBase}8_Evandro-Anatel-1_ed_quad-150x150.jpg`],
+  ["Fabio Feltrin Fabro", "Assistente de Pesquisa · Estação Experimental de Ituporanga", "Engenheiro agrônomo – agente de mercado", `${cepa2026ImageBase}Fabio-150x150.jpg`],
+  ["Gabriella Cristina Sevald", "Assistente de Pesquisa – Agente de Mercado", "Engenheira Agrônoma, MBA em Agronegócio", `${imageBase}IMG_6461-1-scaled-e1755188720377-150x150.jpg`],
+  ["Lucas Trindade Borges", "Assistente de Pesquisa – Agente de Mercado", "Agrônomo, especialista em Agronegócios, mestre em Economia Regional", `${julyImageBase}WhatsApp-Image-2025-07-09-at-10.15.38-e1752080358511-150x150.jpeg`],
+  ["Maiara Antunes", "Estação Experimental de Campos Novos · Assistente de Pesquisa", "Engenheira Agrônoma, especialização em Agronegócios", `${cepaImageBase.replace('/2026/09/', '/2026/03/')}maiara-campos-novos-e1774440362800-150x150.png`],
+  ["Valdenize Pianaro", "Gerência Regional de Canoinhas · Assistente de Pesquisa – Agente de Mercado", "Engenheira Agrônoma, especialização em Agronegócios", `${imageBase}Imagem-do-WhatsApp-de-2025-04-07-as-15.12.51_b0b1d434-e1744049977696-150x150.jpg`],
+  ["Valmir Krestschmer", "Gerência Regional de São Miguel do Oeste", "Técnico de Pesquisa de Mercado · Técnico em Agropecuária", `${imageBase}4_Valmir-SMO-6-150x150.jpg`],
+];
+
+const support = [
+  ["Beatriz Macêdo Medeiros", "Geoprocessamento e IA em Safras", "Chamada pública Fapesc Edital Nº 44/2025 · Engenheira agrônoma, especialista em Geoprocessamento, mestra e doutora em Ciência do Solo", `${cepaImageBase}20260826_155828-e1788438280236-150x150.jpeg`],
+  ["Cristiele Tomm Deckert", "Jornalista", "Chamada pública Fapesc Edital Nº 44/2025 · Jornalista e Médica Veterinária, mestra em Desenvolvimento Regional", `${imageBase}WhatsApp-Image-2026-09-28-at-14.21.09-150x150.jpeg`],
+  ["Debora Pivetta Thibes", "Design Gráfico", "Chamada pública Fapesc Edital Nº 44/2025 · Especialista em Estratégias de Marketing e mestra em Design", `${imageBase}deboraa-1-150x150.jpg`],
+  ["Elton Nogueira Santana", "Analista de dados", "Chamada pública Fapesc Edital Nº 44/2025 · Especialista em Sistemas de Informação", `${imageBase}elton-foto-150x150.png`],
+  ["Henrique V. de Holanda", "Engenheiro de dados", "Chamada pública Fapesc Edital Nº 44/2025 · Engenheiro agrônomo, doutor em Engenharia Mecânica Agrícola", `${imageBase}WhatsApp-Image-2025-11-13-at-16.04.03-e1763121037743-150x150.jpeg`],
+  ["Márcio G. Gomes", "Cientista de dados", "Chamada pública Fapesc Edital Nº 57/2024 · Economista, mestre em Economia", `${imageBase}Marcio-150x150.jpg`],
+  ["Matheus Lopes Machado", "Assistente de pesquisa", "Chamada pública Fapesc Edital Nº 57/2024 · Graduação em Agronomia", `${imageBase}Matheus-e1760098729591-150x150.jpeg`],
+  ["Michele Dreger Vasconcelos Silva", "Economista", "Chamada pública Fapesc Edital Nº 44/2025 · Mestra em Desenvolvimento Regional e Meio Ambiente, doutora em Administração", `${marchImageBase}Design-sem-nome-3-e1741798775656-150x150.png`],
+  ["Rafael Althoff", "Publicidade", "Chamada pública Fapesc Edital Nº 44/2025 · Publicitário, especialista em Marketing e Design, Técnico em Agronegócio e Mestrando em Agroecossistemas", `${imageBase}rafa-foto-150x150.png`],
+  ["Tainara de Souza", "Geoprocessamento e IA em Safras", "Chamada pública Fapesc Edital Nº 44/2025 · Geógrafa, especialista em Geoprocessamento e Mestranda em Geografia", `${imageBase}20260826_160118-e1788438098278-150x150.jpeg`],
+  ["Tatiana Tozzi", "Análise de sistemas", "Chamada pública Fapesc Edital Nº 44/2025 · Sistemas de Informação, especialista em UX Design, mestra em Engenharia e Gestão do Conhecimento", `${imageBase}Tati-150x150.jpg`],
+];
+
+const sections = [
+  { title: "Equipe permanente Epagri/Cepa", people: permanent },
+  { title: "Rede permanente - descentralizada", people: decentralized },
+  { title: "Equipe de apoio", people: support },
+];
+
+function fallbackImage(event, name) {
+  const image = event.currentTarget;
+  image.removeAttribute("src");
+  image.alt = `Foto de ${name}`;
+  image.style.background = "linear-gradient(135deg, #dfe9df, #8aaa8b)";
+}
+
+function createPersonCard([name, role, detail, imageUrl]) {
+  const article = document.createElement("article");
+  article.className = "person-card";
+  article.innerHTML = `
+    <div class="photo-frame">
+      <img class="person-photo" src="${imageUrl}" alt="Foto de ${name}" tabindex="0" />
+    </div>
+    <h3 class="person-name">${name}</h3>
+    <p class="person-role">${role}</p>
+    ${detail ? `<p class="person-detail">${detail}</p>` : ""}
+  `;
+  article.querySelector("img").addEventListener("error", (event) => fallbackImage(event, name));
+  return article;
+}
+
+const root = document.querySelector("#team-sections");
+
+sections.forEach(({ title, people }) => {
+  const section = document.createElement("section");
+  section.className = "team-section";
+  section.innerHTML = `<h2 class="section-heading">${title}</h2><div class="team-grid"></div>`;
+  const grid = section.querySelector(".team-grid");
+  people.forEach((person) => grid.appendChild(createPersonCard(person)));
+  root.appendChild(section);
+});
+
+    </script>
+  </body>
+</html>
